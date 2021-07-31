@@ -99,7 +99,7 @@ function my_keydown(e)
 	{
 		if(ball_x >5)
 		{
-			ball_x = ball_x + block_image_width;
+			ball_x = ball_x - block_image_width;
 			console.log("left key");
 			 canvas.remove(ball_obj);
 			 new_image();
