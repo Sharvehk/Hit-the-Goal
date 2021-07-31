@@ -13,11 +13,11 @@ block_image_width = 5;
 block_image_height = 5;
 
 function load_img(){
-	fabric.Image.fromURL("golf-h.png", function(Img){
+	fabric.Image.fromURL('golf-h.png', function(Img){
 		hole_obj = Img;
-		hole.obj.scaleToWidth(50);
-		hole.obj.scaleToHeight(50);
-		hole.obj.set({
+		hole_obj.scaleToWidth(50);
+		hole_obj.scaleToHeight(50);
+		hole_obj.set({
 			top:hole_y,
 			left:hole_x
 		});
@@ -28,17 +28,16 @@ function load_img(){
 
 function new_image()
 {
-	fabric.Image.fromURL("ball.png", function(IMG){
+	fabric.Image.fromURL('ball.png', function(IMG){
 		ball_obj = IMG;
-		ball.obj.scaleToWidth(50);
-		ball.obj.scaleToHeight(50);
-		ball.obj.set({
+		ball_obj.scaleToWidth(50);
+		ball_obj.scaleToHeight(50);
+		ball_obj.set({
 			top:ball_y,
 			left:ball_x
 		});
 		canvas.add(ball_obj);
 	});
-	new_image();
 }
 
 window.addEventListener("keydown", my_keydown);
